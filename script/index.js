@@ -6,8 +6,8 @@
  function countSentences() {
     let text = document.getElementById("text").value;
     const re = /[.!?]/;
-    const numOfSentences = text.split(re).filter(sentence => sentence !== '');
-    sentences.innerHTML = numOfSentences.length - 1;
+    const numOfSentences = text.split(re).filter(sentence => sentence.trim().length !== 0);
+    sentences.innerHTML = numOfSentences.length;
   };
 
   function countWords() {
