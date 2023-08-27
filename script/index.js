@@ -6,7 +6,7 @@
  function countSentences() {
     let text = document.getElementById("text").value;
     const re = /[.!?]/;
-    const numOfSentences = text.split(re);
+    const numOfSentences = text.split(re).filter(sentence => sentence !== '');
     sentences.innerHTML = numOfSentences.length - 1;
   };
 
